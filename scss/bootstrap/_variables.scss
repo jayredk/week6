@@ -65,13 +65,15 @@ $colors: map-merge(
 );
 
 $primary:       #916000 !default;
-$secondary:     $gray-600 !default;
+$secondary:     #AC8A46 !default;
 $success:       $green !default;
-$info:          $cyan !default;
+$info:          #FFFFFF !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
-$dark:          $gray-800 !default;
+$light:         #E0E0E0 !default;
+$dark:          #8D8D8D !default;
+$gray:          #818A91 !default;
+$grayLight:     #A5A5A5 !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge(
@@ -83,7 +85,10 @@ $theme-colors: map-merge(
     "warning":    $warning,
     "danger":     $danger,
     "light":      $light,
-    "dark":       $dark
+    "dark":       $dark,
+    "black":      $black,
+    "gray":       $gray,
+    "grayLight":       $grayLight
   ),
   $theme-colors
 );
@@ -138,11 +143,20 @@ $spacers: () !default;
 $spacers: map-merge(
   (
     0: 0,
-    1: ($spacer * .25),
-    2: ($spacer * .5),
-    3: $spacer,
-    4: ($spacer * 1.5),
-    5: ($spacer * 3)
+    1:  ($spacer * .25),
+    2:  ($spacer * .5),
+    24: ($spacer * 1.5),     //24px
+    3:   $spacer,
+    32: ($spacer * 2),       //32px
+    4:  ($spacer * 1.5),
+    40: ($spacer * 2.5),     //40px
+    5:  ($spacer * 3),
+    6:  ($spacer * 3.75),    //60px
+    7:  ($spacer * 7),       //112px
+    80:  ($spacer * 5),      //80px
+    240:  ($spacer * 15),    //240px
+    352:  ($spacer * 22),    //352px
+    560:  ($spacer * 35)     //560px
   ),
   $spacers
 );
@@ -151,7 +165,9 @@ $spacers: map-merge(
 $sizes: () !default;
 $sizes: map-merge(
   (
+    12: 12%,
     25: 25%,
+    48: 48%,
     50: 50%,
     75: 75%,
     100: 100%,
@@ -210,7 +226,7 @@ $grid-breakpoints: (
 
 $container-max-widths: (
   sm: 540px,
-  md: 720px,
+  md: 768px,
   lg: 960px,
   xl: 1140px
 ) !default;
@@ -274,7 +290,7 @@ $embed-responsive-aspect-ratios: join(
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", Times, "Helvetica Neue", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case

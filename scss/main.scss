@@ -1,4 +1,7 @@
 @import 'bootstrap/bootstrap.scss';
 
-@import 'base/reboot';
-@import 'base/grid';
+@import 'layout/layout';
+
+@import 'pages/index';
+@import 'pages/product-chanel';
+@import 'pages/member';
